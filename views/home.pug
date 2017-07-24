@@ -1,0 +1,22 @@
+extends continer/layout.pug
+
+block content
+    div.blog-header
+        div.container
+            h2.blog-title.text-center #{title}
+            br
+
+            div.row.justify-content-center
+                div.col-8
+                    form.bd-search.text-center
+                        input.form-control(type="text", placeholder="Search...")
+                        div.dropdown-menu.bd-search-results
+            div.row
+                each res in result
+                    div.col-sm-3
+                        div.card(style="margin-bottom: 15px")
+                            img.rounded.card-img-top(src="https://i.ytimg.com/vi/L9ebH9A75AA/maxresdefault.jpg", width="100%")
+                            div.card-block
+                                h4.card-title node.js
+                                p.card-text node.js
+

@@ -1,0 +1,39 @@
+extends layout.pug
+
+block content
+    script(src="/public/js/system_usage.js")
+    link(rel="stylesheet", href="/public/css/system_usage.css")
+    div.blog-header
+        div.container
+            h2.blog-title.text-center #{title}
+            table(style="width: 100%")
+                tr
+                    td
+                        div.clock.text-center
+                            div.time-box.hour.circle(id="hour")
+                                div.track
+                                div.left.transition-rotate
+                                div.right.transition-rotate
+                                div.mask
+                                span.time(id="hourText") 0
+                                span.percent %
+                                br
+                                span.percent CPU 負載
+                            div.time-box.minute.circle(id="minute")
+                                div.track
+                                div.left.transition-rotate
+                                div.right.transition-rotate
+                                div.mask
+                                span.time(id="minuteText") 0
+                                span.percent %
+                                br
+                                span.percent 記憶體狀態
+                            div.time-box.second.circle(id="second")
+                                div.track
+                                div.left.transition-rotate
+                                div.right.transition-rotate
+                                div.mask
+                                span.time(id="secondText") 0
+                                span.percent %
+                                br
+                                span.percent 硬碟空間

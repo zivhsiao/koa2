@@ -1,0 +1,40 @@
+html
+    head
+        title #{title} - Admin
+        meta(charset="utf-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1, shrink-to-fit=no")
+        meta(name="description", content="Developer")
+        meta(name="author", content="jenfu.developer")
+        link(rel="stylesheet", type="text/css", href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css")
+        link(rel='stylesheet', href="/public/css/font-awesome.min.css")
+        link(rel='stylesheet', href="/public/css/metisMenu.min.css")
+        link(rel='stylesheet', href="/public/css/morris.css")
+        link(rel='stylesheet', href="/public/css/sb-admin-2.css")
+        link(rel="stylesheet", type="text/css", href="/public/my-blog.css")
+        script(src="https://code.jquery.com/jquery-3.2.1.min.js")
+        script(src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js")
+        script(src="/public/js/morris.min.js")
+        script(src="/public/js/raphael.min.js")
+        script(src="/public/js/metisMenu.min.js")
+        script(src="/public/js/sb-admin-2.js")
+        script(src="/public/js/morris-data.js")
+    body
+        //- div.container
+        nav.navbar.navbar-toggleable-md.navbar-inverse.blog-masthead
+            button.navbar-toggler.navbar-toggler-right.hidden-lg-up(type="button")
+                span.navbar-toggler-icon
+            a.navbar-brand(href="/") Store
+            div.collapse.navbar-collapse
+                ul.navbar-nav.mr-auto
+                    li.nav-item.active
+                        a.nav-link Home
+                    li.nav-item
+                        a.nav-link Settings
+                    li.nav-item
+                        a.nav-link About
+
+        block content
+        block foot
+            footer.blog-footer
+                p Copyright by JenFu

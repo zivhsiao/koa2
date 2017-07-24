@@ -1,0 +1,10 @@
+{
+  "dialect": "mysql",
+  "host": "",
+  "port": 3306,
+  "userName": "root",
+  "password": "hezrid5",
+  "databaseName": "koa2Blog",
+  "ssl": false,
+  "timezone": "+08:00"
+}

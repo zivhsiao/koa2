@@ -14,8 +14,6 @@ import session from "koa-session2";
 const onerror = require('koa-onerror');
 const favicon = require('koa-favicon');
 const path = require('path');
-// const cpu_usage = require('./common/cpu_usage');
-// cpu_usage.update();
 
 // import routes
 // import course from './routes/course';

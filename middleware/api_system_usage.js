@@ -40,10 +40,10 @@ const cpu_usage = async() => {
         free_disk = result.free;
         return result;
     })
-    data[1] = (percentStat > 100 ? 100: percentStat);
-    data[2] = total_disk;
-    data[3] = used_disk;
-    data[4] = free_disk;
+    data[1] = (percentStat > 100 ? 100 : (percentStat == '' ? 1 : percentStat));
+    data[2] = (total_disk == '' ? 0 : total_disk);
+    data[3] = (used_disk == '' ? 0 : used_disk);
+    data[4] = (free_disk == '' ? 0 : free_disk);
 
     usage = data;
 }

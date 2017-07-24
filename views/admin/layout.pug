@@ -10,29 +10,223 @@ html
         link(rel='stylesheet', href="/public/css/font-awesome.min.css")
         link(rel='stylesheet', href="/public/css/metisMenu.min.css")
         link(rel='stylesheet', href="/public/css/morris.css")
-        link(rel='stylesheet', href="/public/css/sb-admin-2.css")
+        link(rel='stylesheet', href="/public/css/sb-admin.css")
         link(rel="stylesheet", type="text/css", href="/public/my-blog.css")
+        link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css")
         script(src="https://code.jquery.com/jquery-3.2.1.min.js")
         script(src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js")
         script(src="/public/js/morris.min.js")
         script(src="/public/js/raphael.min.js")
         script(src="/public/js/metisMenu.min.js")
-        script(src="/public/js/sb-admin-2.js")
         script(src="/public/js/morris-data.js")
     body
-        //- div.container
-        nav.navbar.navbar-toggleable-md.navbar-inverse.blog-masthead
-            button.navbar-toggler.navbar-toggler-right.hidden-lg-up(type="button")
-                span.navbar-toggler-icon
-            a.navbar-brand(href="/") Store
-            div.collapse.navbar-collapse
-                ul.navbar-nav.mr-auto
-                    li.nav-item.active
-                        a.nav-link Home
-                    li.nav-item
-                        a.nav-link Settings
-                    li.nav-item
-                        a.nav-link About
+        #wrapper
+            // Navigation
+            nav.navbar.navbar-dark.bg-inverse.navbar-fixed-top
+                // Brand and toggle get grouped for better mobile display
+                .navbar-header
+                    button.navbar-toggler.hidden-sm-up.pull-sm-right(type='button', data-toggle='collapse', data-target='.navbar-ex1-collapse')
+                        | &#x2630;
+                    |
+                    a.navbar-brand(href='index.html') SB Admin BS 4
+                // Top Menu Items
+                ul.nav.navbar-nav.top-nav.navbar-right.pull-xs-right
+                    li.nav-item.buy-now
+                        a.btn.btn-primary-outline.buy-now-btn(href='http://www.strapui.com/themes/sb-admin-html-bootstrap-4/', role='button', style='padding: .375rem 1rem !important; border-color: #999;') Download Now
+                    |
+                    li.dropdown.nav-item
+                        // <div class="dropdown">
+                        a#dropdownMenu4.nav-link.dropdown-toggle(href='javascript:;', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+                            i.fa.fa-envelope
+                            |
+                            b.caret
+                            span.sr-only (current)
+                        |
+                        ul.dropdown-menu.message-dropdown
+                            li.dropdown-item.message-preview
+                                a(href='javascript:;')
+                                    .media
+                                        span.media-left
+                                            img.media-object(src='http://placehold.it/50x50', alt='')
+                                        |
+                                        .media-body
+                                            h5.media-heading
+                                                strong John Smith
+                                            |
+                                            p.small.text-muted
+                                                i.fa.fa-clock-o
+                                                |  Yesterday at 4:32 PM
+                                            |
+                                            p Lorem ipsum dolor sit amet, consectetur...
+                            |
+                            li.dropdown-item.message-preview
+                                a(href='javascript:;')
+                                    .media
+                                        span.media-left
+                                            img.media-object(src='http://placehold.it/50x50', alt='')
+                                        |
+                                        .media-body
+                                            h5.media-heading
+                                                strong John Smith
+                                            |
+                                            p.small.text-muted
+                                                i.fa.fa-clock-o
+                                                |  Yesterday at 4:32 PM
+                                            |
+                                            p Lorem ipsum dolor sit amet, consectetur...
+                            |
+                            li.dropdown-item.message-preview
+                                a(href='javascript:;')
+                                    .media
+                                        span.media-left
+                                            img.media-object(src='http://placehold.it/50x50', alt='')
+                                        |
+                                        .media-body
+                                            h5.media-heading
+                                                strong John Smith
+                                            |
+                                            p.small.text-muted
+                                                i.fa.fa-clock-o
+                                                |  Yesterday at 4:32 PM
+                                            |
+                                            p Lorem ipsum dolor sit amet, consectetur...
+                            |
+                            li.dropdown-item.message-footer
+                                a(href='javascript:;') Read All New Messages
+                        // </div>
+                    |
+                    li.dropdown.nav-item
+                        // <div class="dropdown">
+                        a.nav-link.dropdown-toggle(href='javascript:;', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+                            i.fa.fa-bell
+                            |
+                            b.caret
+                            span.sr-only (current)
+                        |
+                        ul.dropdown-menu.alert-dropdown
+                            li.dropdown-item
+                                a(href='javascript:;')
+                                    | Alert Name
+                                    span.label.label-default  Alert Badge
+                            |
+                            li.dropdown-item
+                                a(href='javascript:;')
+                                    | Alert Name
+                                    span.label.label-primary  Alert Badge
+                            |
+                            li.dropdown-item
+                                a(href='javascript:;')
+                                    | Alert Name
+                                    span.label.label-success Alert Badge
+                            |
+                            li.dropdown-item
+                                a(href='javascript:;')
+                                    | Alert Name
+                                    span.label.label-info  Alert Badge
+                            |
+                            li.dropdown-item
+                                a(href='javascript:;')
+                                    | Alert Name
+                                    span.label.label-warning  Alert Badge
+                            |
+                            li.dropdown-item
+                                a(href='javascript:;')
+                                    | Alert Name
+                                    span.label.label-danger  Alert Badge
+                            |
+                            li.dropdown-divider
+                            |
+                            li.dropdown-item
+                                a(href='javascript:;') View All
+                        // </div>
+                    |
+                    li.dropdown.nav-item
+                        a.nav-link.dropdown-toggle(href='javascript:;', data-toggle='dropdown')
+                            i.fa.fa-user
+                            |  John Smith
+                            b.caret
+                        |
+                        ul.dropdown-menu
+                            li.dropdown-item
+                                a(href='javascript:;')
+                                    i.fa.fa-fw.fa-user
+                                    |  Profile
+                            |
+                            li.dropdown-item
+                                a(href='javascript:;')
+                                    i.fa.fa-fw.fa-envelope
+                                    |  Inbox
+                            |
+                            li.dropdown-item
+                                a(href='javascript:;')
+                                    i.fa.fa-fw.fa-gear
+                                    |  Settings
+                            |
+                            li.divider
+                            |
+                            li.dropdown-item
+                                a(href='javascript:;')
+                                    i.fa.fa-fw.fa-power-off
+                                    |  Log Out
+                // Sidebar Menu Items - These collapse to the responsive navigation menu on small screens
+                .collapse.navbar-collapse.navbar-toggleable-sm.navbar-ex1-collapse
+                    ul.nav.navbar-nav.side-nav.list-group
+                        li.list-group-item
+                            a(href='index.html')
+                                i.fa.fa-fw.fa-dashboard
+                                |  Dashboard
+                        |
+                        li.list-group-item
+                            a(href='charts.html')
+                                i.fa.fa-fw.fa-bar-chart-o
+                                |  Charts
+                        |
+                        li.list-group-item
+                            a(href='tables.html')
+                                i.fa.fa-fw.fa-table
+                                |  Tables
+                        |
+                        li.list-group-item
+                            a(href='forms.html')
+                                i.fa.fa-fw.fa-edit
+                                |  Forms
+                        |
+                        li.list-group-item
+                            a(href='bootstrap-elements.html')
+                                i.fa.fa-fw.fa-desktop
+                                |  Bootstrap Elements
+                        |
+                        li.list-group-item
+                            a(href='bootstrap-grid.html')
+                                i.fa.fa-fw.fa-wrench
+                                |  Bootstrap Grid
+                        |
+                        li.list-group-item
+                            a(href='javascript:;', data-toggle='collapse', data-target='#demo')
+                                i.fa.fa-fw.fa-arrows-v
+                                |  Dropdown
+                                i.fa.fa-fw.fa-caret-down
+                            |
+                            ul#demo.list-group.collapse
+                                li.list-group-item
+                                    a(href='javascript:;') Dropdown Item
+                                |
+                                li.list-group-item
+                                    a(href='javascript:;') Dropdown Item
+                        |
+                        li.list-group-item
+                            a(href='blank-page.html')
+                                i.fa.fa-fw.fa-file
+                                |  Blank Page
+                        |
+                        li.list-group-item
+                            a(href='index-rtl.html')
+                                i.fa.fa-fw.fa-dashboard
+                                |  RTL Dashboard
+                        |
+                        li.list-group-item.more-themes
+                            a(href='http://www.strapui.com/') Buy More Themes
+                // /.navbar-collapse
 
         block content
         block foot

@@ -5,8 +5,8 @@
  * 管理员登录
  * @param ctx
  */
-exports.getLogin = async(ctx) => {
-  await ctx.render('admin/home', {
-    title: '首頁',
-  });
+exports.getLogin = async (ctx) => {
+    await ctx.render('admin/home', {
+        title: '首頁',
+    });
 };

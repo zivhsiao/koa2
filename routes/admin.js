@@ -1,6 +1,7 @@
 'use strict';
 import Router from 'koa-router'
-const admin = require('../controller/admin');
+
+const admin = require('../controller/admin/home');
 
 
 const router = new Router({
